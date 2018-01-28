@@ -26,5 +26,6 @@ function openMapbox(obj) {
   } else if (mapbox == "day10") {
     document.getElementById(mapbox).style.display = "block";
   } else if (mapbox == "day11") {
+    document.getElementById(mapbox).style.display = "block";
   }
 }
