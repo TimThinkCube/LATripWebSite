@@ -1434,6 +1434,12 @@ Instead edit gulp/templates/sprite */
           transform: translate(-50%, -50%);
 }
 
+.googleMapFrame {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
 /* -------------------------------- 
 
 Primary style
@@ -1569,25 +1575,29 @@ h1, h2 {
 
 .cd-timeline-img img {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     position: relative;
     left: 50%;
     top: 50%;
-    margin-left: -12px;
-    margin-top: -12px;
+    margin-left: -16px;
+    margin-top: -16px;
   }
 
-.cd-timeline-img.cd-picture {
-    background: #75ce66;
+.cd-timeline-img.cd-traffic {
+    background: #005792;
   }
 
-.cd-timeline-img.cd-movie {
-    background: #c03b44;
+.cd-timeline-img.cd-gambling {
+    background: #e75c65;
   }
 
 .cd-timeline-img.cd-location {
     background: #f0ca45;
+  }
+
+.cd-timeline-img.cd-picture {
+    background: #75eb66;
   }
 
 @media only screen and (min-width: 1170px) {

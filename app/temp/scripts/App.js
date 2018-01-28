@@ -11266,6 +11266,7 @@
 	    this.openModalButton = (0, _jquery2.default)(".open-modal");
 	    this.modal = (0, _jquery2.default)(".modal");
 	    this.closeModalButton = (0, _jquery2.default)(".modal__close");
+
 	    this.events();
 	  }
 
