@@ -440,8 +440,8 @@ a {
 }
 
 .large-hero {
-  border-bottom: 10px solid #2f5572;
   position: relative;
+  margin-bottom: 30px;
 
 }
 
@@ -469,7 +469,7 @@ a {
 
 .large-hero__title {
   font-weight: 300;
-  color: #2f5572;
+  color: #fff;
   margin: 0;
   font-size: 2.4rem;
 }
@@ -483,7 +483,7 @@ a {
 
 .large-hero__subtitle {
   font-weight: 300;
-  color: #2f5572;
+  color: #fff;
   font-size: 1.5rem;
   margin: 0;
 }
@@ -1103,22 +1103,24 @@ Instead edit gulp/templates/sprite */
   position: absolute;
   width: 100%;
   z-index: 2;
+  top:0;
   transition: background-color .3s ease-out;
+  background-color: rgba(5,31,56, .55);
 }
 
 .site-header--is-expanded {
-  background-color: rgba(47,85,114, .55);
+  background-color: rgba(47,85,114, .85);
 }
 
 @media (min-width: 800px) {
 
   .site-header {
     position: fixed;
-    background-color: rgba(47,85,114, .3);
+    background-color: rgba(5,31,56, .85);
   }
 
   .site-header--dark {
-    background-color: rgba(23, 51, 72, .85);
+    background-color: rgba(#051f38 .85);
   }
 }
 
@@ -1140,7 +1142,6 @@ Instead edit gulp/templates/sprite */
   transition: transform .3s ease-out, -webkit-transform .3s ease-out;
   -webkit-transform-origin: 50% 0;
           transform-origin: 50% 0;
-  background-color: #2f5572;
   padding: 25px 36px;
 }
 
@@ -1159,7 +1160,16 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header__logo__graphic {
-  text-indent: -9999px;
+  color: #FFF;
+  font-size: 1.3rem;
+  width: 130px;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__logo__graphic {
+    font-size: 1.2rem;
+  }
 }
 
 .site-header__menu-icon {
@@ -1242,8 +1252,8 @@ Instead edit gulp/templates/sprite */
           transform: scale(1.2);
   transition: all .3s ease-out;
   position: relative;
+  padding-top: 10px;
   z-index: -10;
-  padding-top: 90px;
   text-align: center;
 }
 
@@ -1261,8 +1271,125 @@ Instead edit gulp/templates/sprite */
 .site-header__menu-content--is-visible {
   opacity: 1;
   z-index: 1;
+  padding-top: 90px;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.slideshow {
+  display: block;
+  width: 100%;
+  height: 650px;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+}
+
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  -webkit-animation: imageAnimation 80s linear infinite;
+          animation: imageAnimation 80s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+  background-image: url(./../../assets/images/scene-route66.jpg);
+  background-position: 10% 10%;
+}
+
+.slideshow li:nth-child(2) {
+  background-image: url(./../../assets/images/scene-lineres.jpg);
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3) {
+  background-image: url(./../../assets/images/scene-universal.jpg);
+  background-position: 85% 85%;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4) {
+  background-image: url(./../../assets/images/scene-getty.jpg);
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5) {
+  background-image: url(./../../assets/images/scene-low.jpg);
+  -webkit-animation-delay: 40s;
+          animation-delay: 40s;
+}
+
+.slideshow li:nth-child(6) {
+  background-image: url(./../../assets/images/scene-group.jpg);
+  -webkit-animation-delay: 50s;
+          animation-delay: 50s;
+}
+
+.slideshow li:nth-child(7) {
+  background-image: url(./../../assets/images/scene-horsebend.jpg);
+  -webkit-animation-delay: 60s;
+          animation-delay: 60s;
+}
+
+.slideshow li:nth-child(8) {
+  background-image: url(./../../assets/images/scene-fisher.jpg);
+  -webkit-animation-delay: 70s;
+          animation-delay: 70s;
+}
+
+@-webkit-keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+
+.no-cssanimations .slideshow li {
+  opacity: 1;
 }
 
 .primary-nav {
