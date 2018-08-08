@@ -1161,15 +1161,8 @@ Instead edit gulp/templates/sprite */
 
 .site-header__logo__graphic {
   color: #FFF;
-  font-size: 1.3rem;
+  font-size: 1rem;
   width: 130px;
-}
-
-@media (min-width: 800px) {
-
-  .site-header__logo__graphic {
-    font-size: 1.2rem;
-  }
 }
 
 .site-header__menu-icon {
@@ -1279,7 +1272,8 @@ Instead edit gulp/templates/sprite */
 .slideshow {
   display: block;
   width: 100%;
-  height: 650px;
+  max-width: 100%;
+  height: 100%;
   left: 0;
   z-index: 0;
   list-style: none;
